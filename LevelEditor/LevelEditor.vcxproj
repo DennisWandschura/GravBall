@@ -66,7 +66,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>$(SolutionDir)..\game\tools\LevelEditor\</OutDir>
     <IncludePath>d:\Users\dennis\Documents\Visual Studio 2015\Projects\2d ball game\source\2d ball game\include;d:\Users\dennis\Documents\Visual Studio 2015\Projects\2d ball game\source\GameLib\include;d:\Users\dennis\Documents\Visual Studio 2015\Projects\vxLib\include;$(IncludePath)</IncludePath>
-    <LibraryPath>d:\Users\dennis\Documents\Visual Studio 2015\Projects\double-conversion\lib\debug;d:\Users\dennis\Documents\Visual Studio 2015\Projects\vxLib\lib\vs14;d:\Users\dennis\Documents\Visual Studio 2015\Projects\2d ball game\game\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>d:\Users\dennis\Documents\Visual Studio 2015\Projects\vxLib\lib\vs14;d:\Users\dennis\Documents\Visual Studio 2015\Projects\2d ball game\game\lib;$(LibraryPath)</LibraryPath>
     <IntDir>$(SolutionDir)..\tmp\$(ProjectName)\debug\</IntDir>
     <TargetName>$(ProjectName)_debug</TargetName>
   </PropertyGroup>
