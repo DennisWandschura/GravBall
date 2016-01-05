@@ -82,7 +82,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>d:\Users\dennis\Documents\Visual Studio 2015\Projects\2d ball game\source\GameLib\include;d:\Users\dennis\Documents\Visual Studio 2015\Projects\vxLib\include;$(IncludePath)</IncludePath>
+    <IncludePath>d:\Users\dennis\Documents\Visual Studio 2015\Projects\double-conversion\include;d:\Users\dennis\Documents\Visual Studio 2015\Projects\2d ball game\source\GameLib\include;d:\Users\dennis\Documents\Visual Studio 2015\Projects\vxLib\include;$(IncludePath)</IncludePath>
     <LibraryPath>d:\Users\dennis\Documents\Visual Studio 2015\Projects\2d ball game\game\lib;d:\Users\dennis\Documents\Visual Studio 2015\Projects\vxLib\lib\vs14;$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)..\game\bin\</OutDir>
     <IntDir>$(SolutionDir)..\tmp\$(ProjectName)\debug\</IntDir>
