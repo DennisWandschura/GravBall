@@ -1,0 +1,507 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Development|x64">
+      <Configuration>Development</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Editor Debug|x64">
+      <Configuration>Editor Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Fastbuild|x64">
+      <Configuration>Fastbuild</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E2C72666-204B-47CB-96E0-B73464AE3A48}</ProjectGuid>
+    <RootNamespace>My2dballgame</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.10240.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Editor Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Fastbuild|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>FastLTCG</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Editor Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Fastbuild|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>d:\Users\dennis\Documents\Visual Studio 2015\Projects\double-conversion\include;d:\Users\dennis\Documents\Visual Studio 2015\Projects\2d ball game\source\GameLib\include;d:\Users\dennis\Documents\Visual Studio 2015\Projects\vxLib\include;$(IncludePath)</IncludePath>
+    <LibraryPath>d:\Users\dennis\Documents\Visual Studio 2015\Projects\2d ball game\game\lib;d:\Users\dennis\Documents\Visual Studio 2015\Projects\double-conversion\lib\debug;d:\Users\dennis\Documents\Visual Studio 2015\Projects\vxLib\lib\vs14;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)..\game\bin\</OutDir>
+    <IntDir>$(SolutionDir)..\tmp\$(ProjectName)\debug\</IntDir>
+    <TargetName>Game_debug</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Editor Debug|x64'">
+    <IncludePath>d:\Users\dennis\Documents\Visual Studio 2015\Projects\double-conversion\include;d:\Users\dennis\Documents\Visual Studio 2015\Projects\2d ball game\source\GameLib\include;d:\Users\dennis\Documents\Visual Studio 2015\Projects\vxLib\include;$(IncludePath)</IncludePath>
+    <LibraryPath>d:\Users\dennis\Documents\Visual Studio 2015\Projects\2d ball game\game\lib;d:\Users\dennis\Documents\Visual Studio 2015\Projects\double-conversion\lib\debug;d:\Users\dennis\Documents\Visual Studio 2015\Projects\vxLib\lib\vs14;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)..\game\lib\</OutDir>
+    <IntDir>$(SolutionDir)..\tmp\$(ProjectName)\editor_debug\</IntDir>
+    <TargetName>Game_debug</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Fastbuild|x64'">
+    <IncludePath>d:\Users\dennis\Documents\Visual Studio 2015\Projects\2d ball game\source\GameLib\include;d:\Users\dennis\Documents\Visual Studio 2015\Projects\vxLib\include;$(IncludePath)</IncludePath>
+    <LibraryPath>d:\Users\dennis\Documents\Visual Studio 2015\Projects\vxLib\lib\vs14;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)..\game\bin\</OutDir>
+    <IntDir>$(SolutionDir)..\tmp\$(ProjectName)\debug\</IntDir>
+    <TargetName>$(ProjectName)_debug</TargetName>
+    <NMakeBuildCommandLine>"E:\dev\FASTBuild-x64\FBuild.exe" -ide</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>"E:\dev\FASTBuild-x64\FBuild.exe" -ide</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>"E:\dev\FASTBuild-x64\FBuild.exe" -clean -ide</NMakeCleanCommandLine>
+    <NMakeIncludeSearchPath>d:\Users\dennis\Documents\Visual Studio 2015\Projects\vxLib\include;d:\Users\dennis\Documents\Visual Studio 2015\Projects\2d ball game\source\GameLib\include;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development|x64'">
+    <IncludePath>d:\Users\dennis\Documents\Visual Studio 2015\Projects\2d ball game\source\GameLib\include;d:\Users\dennis\Documents\Visual Studio 2015\Projects\vxLib\include;$(IncludePath)</IncludePath>
+    <LibraryPath>d:\Users\dennis\Documents\Visual Studio 2015\Projects\vxLib\lib\vs14;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)..\game\bin\</OutDir>
+    <IntDir>$(SolutionDir)..\tmp\$(ProjectName)\dev\</IntDir>
+    <TargetName>$(ProjectName)_dev</TargetName>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>d:\Users\dennis\Documents\Visual Studio 2015\Projects\double-conversion\include;d:\Users\dennis\Documents\Visual Studio 2015\Projects\2d ball game\source\GameLib\include;d:\Users\dennis\Documents\Visual Studio 2015\Projects\vxLib\include;$(IncludePath)</IncludePath>
+    <LibraryPath>d:\Users\dennis\Documents\Visual Studio 2015\Projects\double-conversion\lib\release;d:\Users\dennis\Documents\Visual Studio 2015\Projects\2d ball game\game\lib;d:\Users\dennis\Documents\Visual Studio 2015\Projects\vxLib\lib\vs14;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)..\game\bin\</OutDir>
+    <IntDir>$(SolutionDir)..\tmp\release\</IntDir>
+    <NMakeBuildCommandLine>"E:\dev\FASTBuild-x64\FBuild.exe" -ide release</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>"E:\dev\FASTBuild-x64\FBuild.exe" -ide release</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>"E:\dev\FASTBuild-x64\FBuild.exe" -clean -ide release</NMakeCleanCommandLine>
+    <NMakeIncludeSearchPath>d:\Users\dennis\Documents\Visual Studio 2015\Projects\vxLib\include;d:\Users\dennis\Documents\Visual Studio 2015\Projects\2d ball game\source\GameLib\include;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_VX_ASSERT;_VX_WINDOWS;_VX_NO_EXCEPTIONS;NOMINMAX;_CRT_SECURE_NO_WARNINGS;_VX_FMA;_VX_SSE41;_DEV;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CallingConvention>FastCall</CallingConvention>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>vxlib_sd.lib;D3D12.lib;DXGI.lib;d3dcompiler.lib;double-conversion_static.lib;gamelib_sd.lib;XAUDIO2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <FxCompile>
+      <ShaderModel>5.0</ShaderModel>
+      <ObjectFileOutput>$(OutDir)../data/shaders/%(Filename)_d.cso</ObjectFileOutput>
+    </FxCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Editor Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_VX_ASSERT;_VX_WINDOWS;_VX_NO_EXCEPTIONS;NOMINMAX;_CRT_SECURE_NO_WARNINGS;_VX_FMA;_VX_SSE41;_EDITOR;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CallingConvention>FastCall</CallingConvention>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>vxlib_d.lib;D3D12.lib;DXGI.lib;d3dcompiler.lib;double-conversion.lib;gamelib_editord.lib;xaudio2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <FxCompile>
+      <ShaderModel>5.0</ShaderModel>
+      <ObjectFileOutput>$(OutDir)../data/shaders/%(Filename)_d.cso</ObjectFileOutput>
+    </FxCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Fastbuild|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_VX_ASSERT;_VX_WINDOWS;_VX_NO_EXCEPTIONS;NOMINMAX;_CRT_SECURE_NO_WARNINGS;_VX_FMA;_VX_SSE41;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CallingConvention>FastCall</CallingConvention>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>vxlib_sd.lib;D3D12.lib;DXGI.lib;d3dcompiler.lib;DbgHelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <FxCompile>
+      <ShaderModel>5.0</ShaderModel>
+      <ObjectFileOutput>$(OutDir)../data/shaders/%(Filename)_d.cso</ObjectFileOutput>
+    </FxCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Development|x64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Full</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_VX_ASSERT;_VX_WINDOWS;_VX_NO_EXCEPTIONS;NOMINMAX;_CRT_SECURE_NO_WARNINGS;_VX_FMA;_VX_SSE41;_DEV;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AssemblerOutput>AssemblyAndSourceCode</AssemblerOutput>
+      <UseUnicodeForAssemblerListing>true</UseUnicodeForAssemblerListing>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <EnforceTypeConversionRules>true</EnforceTypeConversionRules>
+      <CallingConvention>FastCall</CallingConvention>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>vxlib_sd.lib;D3D12.lib;DXGI.lib;d3dcompiler.lib;DbgHelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>false</OptimizeReferences>
+    </Link>
+    <FxCompile>
+      <ShaderModel>5.0</ShaderModel>
+      <ObjectFileOutput>$(OutDir)../data/shaders/%(Filename)_d.cso</ObjectFileOutput>
+    </FxCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_VX_ASSERT;_VX_WINDOWS;_VX_NO_EXCEPTIONS;NOMINMAX;_CRT_SECURE_NO_WARNINGS;_VX_FMA;_VX_SSE41;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <CallingConvention>FastCall</CallingConvention>
+      <EnforceTypeConversionRules>true</EnforceTypeConversionRules>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <DebugInformationFormat>None</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>vxlib_s.lib;D3D12.lib;DXGI.lib;d3dcompiler.lib;double-conversion_static.lib;gamelib_s.lib;xaudio2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <FxCompile>
+      <ShaderModel>5.0</ShaderModel>
+      <ObjectFileOutput>$(OutDir)../data/shaders/%(Filename).cso</ObjectFileOutput>
+    </FxCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AudioAspect.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Editor Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Fastbuild|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="AudioDevice.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Editor Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Fastbuild|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="BmpFile.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Editor Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Fastbuild|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="CpuProfiler.cpp" />
+    <ClCompile Include="createLevel.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Editor Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Fastbuild|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="DefaultController.cpp" />
+    <ClCompile Include="DefaultProgram.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Editor Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Fastbuild|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="DrawTextProgram.cpp" />
+    <ClCompile Include="Engine.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Editor Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Fastbuild|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="EntityAspect.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Editor Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Fastbuild|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="EntityPipeline.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Editor Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Fastbuild|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="EventManager.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Editor Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Fastbuild|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GpuResourceManager.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Editor Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Fastbuild|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Locator.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Editor Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Fastbuild|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Editor Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Fastbuild|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="MeshBuilder.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Editor Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Fastbuild|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="MeshManager.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Editor Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Fastbuild|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="PhysicsAspect.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Editor Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Fastbuild|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="PhysicsCollisionGenerator.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Editor Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Fastbuild|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="PlayerInputController.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Editor Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Fastbuild|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="RenderAspect.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Editor Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Fastbuild|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="RenderFrameData.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Editor Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Fastbuild|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ResourceAspect.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Editor Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Fastbuild|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ShaderManager.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Editor Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Fastbuild|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="dllExport.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="SwapChain.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Editor Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Fastbuild|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="SystemAspect.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Editor Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Fastbuild|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="test_collision.cpp" />
+    <ClCompile Include="Test_load_bmp.cpp" />
+    <ClCompile Include="test_setClearBits.cpp" />
+    <ClCompile Include="TextRenderer.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Editor Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Fastbuild|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Editor Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Fastbuild|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="TextureArrayManager.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Editor Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Fastbuild|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="UploadManager.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Editor Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Fastbuild|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="algorithm.h" />
+    <ClInclude Include="CpuProfiler.h" />
+    <ClInclude Include="DefaultController.h" />
+    <ClInclude Include="DrawTextProgram.h" />
+    <ClInclude Include="EntityFileBase.h" />
+    <ClInclude Include="GpuCameraBuffer.h" />
+    <ClInclude Include="include\game\dllExport.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="AudioAspect.h" />
+    <ClInclude Include="AudioDevice.h" />
+    <ClInclude Include="binary_tree.h" />
+    <ClInclude Include="Collision.h" />
+    <ClInclude Include="GpuResourceManager.h" />
+    <ClInclude Include="GravityAreaFunctors.h" />
+    <ClInclude Include="Manifold.h" />
+    <ClInclude Include="GpuMultiBlockAllocator.h" />
+    <ClInclude Include="PhysicsCollisionGenerator.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Editor Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="d3dx12.h" />
+    <ClInclude Include="DefaultProgram.h" />
+    <ClInclude Include="DescriptorHeap.h" />
+    <ClInclude Include="dynamic_bitset.h" />
+    <ClInclude Include="BmpFile.h" />
+    <ClInclude Include="CreateLevel.h" />
+    <ClInclude Include="D3DObject.h" />
+    <ClInclude Include="dynamic_array.h" />
+    <ClInclude Include="Engine.h" />
+    <ClInclude Include="EntityAspect.h" />
+    <ClInclude Include="EntityPipeline.h" />
+    <ClInclude Include="EventManager.h" />
+    <ClInclude Include="hash_table.h" />
+    <ClInclude Include="Keyboard.h" />
+    <ClInclude Include="Locator.h" />
+    <ClInclude Include="MeshBuilder.h" />
+    <ClInclude Include="MeshManager.h" />
+    <ClInclude Include="PhysicsAspect.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Editor Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="PhysicsDynamicCircle.h" />
+    <ClInclude Include="PlayerInputController.h" />
+    <ClInclude Include="RenderAspect.h" />
+    <ClInclude Include="RenderFrameData.h" />
+    <ClInclude Include="RenderProgram.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="ResourceAspect.h" />
+    <ClInclude Include="ResourceDesc.h" />
+    <ClInclude Include="ShaderManager.h" />
+    <ClInclude Include="StaticController.h" />
+    <ClInclude Include="StaticGrid.h" />
+    <ClInclude Include="SwapChain.h" />
+    <ClInclude Include="SystemAspect.h" />
+    <ClInclude Include="test_collision.h" />
+    <ClInclude Include="test_setClearBits.h" />
+    <ClInclude Include="TextRenderer.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="TextureArrayManager.h" />
+    <ClInclude Include="UploadManager.h" />
+    <ClInclude Include="Vertex.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="DefaultPs.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Editor Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Fastbuild|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Development|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="DefaultVs.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Editor Debug|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Fastbuild|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Development|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="EditorDefaultPs.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Editor Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="TextPS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Editor Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Fastbuild|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Development|x64'">Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="TextVS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Editor Debug|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Fastbuild|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Development|x64'">Vertex</ShaderType>
+    </FxCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
